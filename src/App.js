@@ -1,23 +1,45 @@
-import {useState} from 'react'
-
+import "../src/App.css";
 function App() {
-  const [error, setError] = useState();
+  let invitation_token = "";
+
+  const queryParameters = new URLSearchParams(window.location.search);
+  invitation_token = queryParameters.get("invitation_token") ?? "";
+  if (invitation_token == null) {
+    invitation_token = window.sessionStorage.getItem("invitation_token") ?? "";
+    console.log("invitation_token", invitation_token);
+  } else {
+    console.log("invitation_token", invitation_token);
+  }
+
   return (
     <html>
       <body>
         <div className="App">
-          <h1>{error}</h1>
+          <img
+            alt="tt"
+            width={150}
+            height={150}
+            src={require("./res/appIcon.png")}
+          />
 
-          <p>
-            <a
-              onErrorCapture={(error) => {
-                setError(error);
-              }}
-              href="com.eloveit.tasktag://register/4948d9c1-0c63-4cf9-983f-52fc30af7eb4"
-            >
-              Open TaskTag
-            </a>
-          </p>
+          <div>
+            <div className="button-app">
+              <a href={"com.eloveit.tasktag://register/" + invitation_token}>
+                Open TaskTag App
+              </a>
+            </div>
+            <br></br>
+    
+            <div className="button-web">
+              <a
+                href={
+                  "https://app.tasktag.com/register/register-with-email?invitation_token=" +
+                  invitation_token
+                }>
+                Open TaskTag Web
+              </a>
+            </div>
+          </div>
         </div>
       </body>
     </html>
