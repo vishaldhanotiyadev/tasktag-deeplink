@@ -33,6 +33,15 @@ function App() {
             <div className="button-web">
               <a target="_blank"
                 href={
+                  "https://app.tasktag.com/register?invitation_token=" +
+                  invitation_token
+                } rel="noreferrer">
+                Open TaskTag mobile
+              </a>
+            </div>
+            <div className="button-web">
+              <a target="_blank"
+                href={
                   "https://app.tasktag.com/register/signup-with-email?invitation_token=" +
                   invitation_token
                 } rel="noreferrer">
