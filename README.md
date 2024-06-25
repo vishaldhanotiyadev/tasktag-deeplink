@@ -2,11 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/af7a68a7-d15b-4c7b-b8e2-62f04dc71e8f/deploy-status)](https://app.netlify.com/sites/tasktag-deeplink/deploys)
+
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
+
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
