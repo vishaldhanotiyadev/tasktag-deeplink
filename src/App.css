@@ -17,7 +17,7 @@
   border-radius: 5px;
   background-color: #000;
 }
-a:link {
+a:link,a:visited, a:hover, a:active  {
   color: white;
   font-weight: 500;
   text-decoration: none;

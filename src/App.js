@@ -31,11 +31,11 @@ function App() {
             <br></br>
     
             <div className="button-web">
-              <a
+              <a target="_blank"
                 href={
-                  "https://app.tasktag.com/register/register-with-email?invitation_token=" +
+                  "https://app.tasktag.com/register/signup-with-email?invitation_token=" +
                   invitation_token
-                }>
+                } rel="noreferrer">
                 Open TaskTag Web
               </a>
             </div>
