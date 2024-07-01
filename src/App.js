@@ -1,4 +1,5 @@
 import "../src/App.css";
+import TaskTagWebLink from "./TaskTagWebLink";
 
 const PROD_URL =
   "https://app.tasktag.com/register/signup-with-email?invitation_token=";
@@ -53,25 +54,7 @@ const App = () => {
             </p>
 
             <div className="button">
-              {env_prod ? (
-                <a
-                  id="1"
-                  target="_blank"
-                  href={PROD_URL + invitation_token}
-                  rel="noreferrer"
-                >
-                  Open TaskTag Web
-                </a>
-              ) : (
-                <a
-                  id="2"
-                  target="_blank"
-                  href={DEV_URL + invitation_token}
-                  rel="noreferrer"
-                >
-                  Open TaskTag Web
-                </a>
-              )}
+              <TaskTagWebLink env_prod invitation_token />
             </div>
           </div>
         </div>
