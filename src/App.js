@@ -1,11 +1,6 @@
 import "../src/App.css";
 import TaskTagWebLink from "./TaskTagWebLink";
 
-const PROD_URL =
-  "https://app.tasktag.com/register/signup-with-email?invitation_token=";
-const DEV_URL =
-  "https://beta.app.tasktag.com/register/signup-with-email?invitation_token=";
-
 const App = () => {
   let invitation_token = "";
   let env_prod = false;
