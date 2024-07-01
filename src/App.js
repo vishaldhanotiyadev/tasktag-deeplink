@@ -54,11 +54,21 @@ const App = () => {
 
             <div className="button">
               {env_prod ? (
-                <a target="_blank" href={PROD_URL + invitation_token}>
+                <a
+                  id="1"
+                  target="_blank"
+                  href={PROD_URL + invitation_token}
+                  rel="noopener"
+                >
                   Open TaskTag Web
                 </a>
               ) : (
-                <a target="_blank" href={DEV_URL + invitation_token}>
+                <a
+                  id="2"
+                  target="_blank"
+                  href={DEV_URL + invitation_token}
+                  rel="noopener"
+                >
                   Open TaskTag Web
                 </a>
               )}
