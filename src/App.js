@@ -49,7 +49,10 @@ const App = () => {
             </p>
 
             <div className="button">
-              <TaskTagWebLink env_prod invitation_token />
+              <TaskTagWebLink
+                env_prod={env_prod}
+                invitation_token={invitation_token}
+              />
             </div>
           </div>
         </div>
