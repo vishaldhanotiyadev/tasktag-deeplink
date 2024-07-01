@@ -26,8 +26,12 @@ const App = () => {
   const appendToken = (env, token) => {
     console.log("&&&&&&&&===" + env + "====" + token);
     if (env) {
+      console.log("&&&&&&&&===" + PROD_URL + token);
+
       return PROD_URL + token;
     } else {
+      console.log("&&&&&&&&=== else" + DEV_URL + token);
+
       return DEV_URL + token;
     }
   };
