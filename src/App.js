@@ -23,18 +23,6 @@ const App = () => {
     console.log("env_prod else", env_prod);
   }
 
-  const appendToken = (env = false, token) => {
-    let url = "";
-    if (env) {
-      url = PROD_URL + token;
-    } else {
-      url = DEV_URL + token;
-    }
-    console.log("&&&&&&&&=== url else===" + url);
-
-    return url;
-  };
-
   return (
     <html>
       <body>
