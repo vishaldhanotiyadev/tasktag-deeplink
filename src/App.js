@@ -7,7 +7,7 @@ const DEV_URL =
 
 const App = () => {
   let invitation_token = "";
-  let env_prod = "";
+  let env_prod = false;
 
   const queryParameters = new URLSearchParams(window.location.search);
 
