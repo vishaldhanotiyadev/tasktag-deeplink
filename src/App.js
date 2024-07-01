@@ -1,12 +1,16 @@
 import "../src/App.css";
 function App() {
   let invitation_token = "";
+  let env_prod = "";
 
   const queryParameters = new URLSearchParams(window.location.search);
   invitation_token = queryParameters.get("invitation_token") ?? "";
+  env_prod = window.sessionStorage.getItem("env_prod") ?? "";
   if (invitation_token == null) {
     invitation_token = window.sessionStorage.getItem("invitation_token") ?? "";
+    env_prod = window.sessionStorage.getItem("env_prod") ?? "";
     console.log("invitation_token", invitation_token);
+    console.log("env_prod", env_prod);
   } else {
     console.log("invitation_token", invitation_token);
   }
@@ -33,7 +37,7 @@ function App() {
             <div className="button-web">
               <a target="_blank"
                 href={
-                  "https://app.tasktag.com/register/signup-with-email?invitation_token=" +
+                  env_prod ? "https://app.tasktag.com/register/signup-with-email?invitation_token=" :"https://app.tasktag.com/register/signup-with-email?invitation_token="  +
                   invitation_token
                 } rel="noreferrer">
                 Open TaskTag Web
