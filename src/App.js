@@ -23,17 +23,16 @@ const App = () => {
     console.log("env_prod else", env_prod);
   }
 
-  const appendToken = (env, token) => {
-    console.log("&&&&&&&&===" + env + "====" + token);
+  const appendToken = (env = false, token) => {
+    let url = "";
     if (env) {
-      console.log("&&&&&&&&===" + PROD_URL + token);
-
-      return PROD_URL + token;
+      url = PROD_URL + token;
     } else {
-      console.log("&&&&&&&&=== else" + DEV_URL + token);
-
-      return DEV_URL + token;
+      url = DEV_URL + token;
     }
+    console.log("&&&&&&&&=== else" + url);
+
+    return url;
   };
 
   return (
