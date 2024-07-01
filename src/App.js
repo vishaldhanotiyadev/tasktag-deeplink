@@ -67,7 +67,11 @@ const App = () => {
             <div className="button">
               <a
                 target="_blank"
-                href={appendToken(env_prod, invitation_token)}
+                href={
+                  env_prod
+                    ? PROD_URL + invitation_token
+                    : DEV_URL + invitation_token
+                }
                 rel="noreferrer"
               >
                 Open TaskTag Web
