@@ -53,17 +53,23 @@ const App = () => {
             </p>
 
             <div className="button">
-              <a
-                target="_blank"
-                href={
-                  env_prod
-                    ? PROD_URL + invitation_token
-                    : DEV_URL + invitation_token
-                }
-                rel="noreferrer"
-              >
-                Open TaskTag Web
-              </a>
+              {env_prod ? (
+                <a
+                  target="_blank"
+                  href={PROD_URL + invitation_token}
+                  rel="noreferrer"
+                >
+                  Open TaskTag Web
+                </a>
+              ) : (
+                <a
+                  target="_blank"
+                  href={DEV_URL + invitation_token}
+                  rel="noreferrer"
+                >
+                  Open TaskTag Web
+                </a>
+              )}
             </div>
           </div>
         </div>
