@@ -58,7 +58,7 @@ const App = () => {
                   id="1"
                   target="_blank"
                   href={PROD_URL + invitation_token}
-                  rel="noopener"
+                  rel="noreferrer"
                 >
                   Open TaskTag Web
                 </a>
@@ -67,7 +67,7 @@ const App = () => {
                   id="2"
                   target="_blank"
                   href={DEV_URL + invitation_token}
-                  rel="noopener"
+                  rel="noreferrer"
                 >
                   Open TaskTag Web
                 </a>
