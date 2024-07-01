@@ -30,7 +30,7 @@ const App = () => {
     } else {
       url = DEV_URL + token;
     }
-    console.log("&&&&&&&&=== else" + url);
+    console.log("&&&&&&&&=== url else===" + url);
 
     return url;
   };
