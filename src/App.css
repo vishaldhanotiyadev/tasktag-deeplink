@@ -5,15 +5,15 @@
   align-items: center;
 }
 
-.center-div{
+.center-div {
   width: 400px;
   margin-top: 30px;
 }
 
-.text{
+.text {
   font-weight: 400;
-text-align: center;
-margin-inline: 50px;
+  text-align: center;
+  margin-inline: 50px;
 }
 
 .button {
@@ -25,7 +25,10 @@ margin-inline: 50px;
   background-color: #000;
 }
 
-a:link,a:visited, a:hover, a:active  {
+a:link,
+a:visited,
+a:hover,
+a:active {
   color: white;
   font-weight: 500;
   text-decoration: none;
